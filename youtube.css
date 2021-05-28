@@ -1,0 +1,240 @@
+/* =================================================================== */
+/* @name               YouTube Custom Theme                            */
+/* @funtionality       Adds a Greenish-Blue theme for YouTube          */
+/* @author             Slogllykop / Slog                               */
+/* @version            ver: 2.3.5 beta                                 */
+/* @notes              CSS ONLY WORKS WITH DARK MODE                   */
+/* @discord            Slog#8870                                       */
+/* @twitter            @_Slogllykop_                                   */
+/* @youtube            @Slogllykop                                     */
+/* =================================================================== */
+
+
+/*START OF CSS*/
+
+/*Fonts import*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+
+/*Main Colours / variables*/
+html:not(.style-scope)[dark], :not(.style-scope)[dark] {
+    --ytd-searchbox-legacy-border-color: cyan;
+    --ytd-searchbox-legacy-button-border-color: cyan;
+    --ytd-searchbox-background: rgba(3, 240, 252, 0.1);
+    --ytd-searchbox-text-color: rgba(0, 255, 183, 1);
+    --ytd-searchbox-legacy-button-icon-color: rgba(3, 200, 190, 1);
+    --ytd-searchbox-legacy-button-hover-border-color: cyan;
+    --ytd-searchbox-legacy-button-hover-color: rgba(3, 240, 252, 0.4);
+    --ytd-searchbox-legacy-button-color: rgba(3, 240, 252, 0.2);
+    --yt-spec-general-background-a: rgba(3, 240, 252, 0.05);
+    --yt-spec-general-background-b: rgba(3, 240, 252, 0.3);
+    --yt-spec-general-background-c: rgba(3, 240, 252, 0.15);
+    --yt-spec-text-primary: rgba(0, 255, 183, 1);
+    --yt-spec-text-secondary: rgba(3, 200, 190, 1);
+    --yt-spec-call-to-action: rgba(0, 255, 183, 1);
+    --yt-spec-icon-active-other: rgba(3, 200, 190, 1);
+    --yt-spec-icon-inactive: rgba(3, 200, 190, 1);
+    --yt-spec-brand-background-solid: rgba(0, 56, 54, 0.8);
+    --yt-spec-brand-background-primary: rgba(0, 56, 54, 1);
+    --yt-spec-brand-icon-active: rgba(0, 255, 183, 1);
+    --yt-spec-brand-icon-inactive: rgba(3, 200, 190, 1);
+    --yt-spec-brand-subscribe-button-background: rgba(0, 255, 183, 1);
+    --yt-spec-brand-button-background: rgba(0, 255, 183, 1);
+    --yt-spec-static-brand-white: rgba(0, 56, 54, 1);
+    --yt-spec-static-overlay-background-heavy: rgba(3, 200, 190, 0.69);
+    --yt-spec-brand-link-text: rgba(0, 255, 183, 1);
+    --yt-spec-themed-green: rgba(0, 255, 183, 1);
+    --yt-spec-themed-blue: rgba(3, 200, 190, 0.69);
+    --yt-spec-text-primary-inverse: rgba(0, 255, 183, 1);
+    --yt-spec-badge-chip-background: rgba(3, 200, 190, 0.69);
+    --yt-spec-icon-disabled: rgba(3, 200, 190, 0.69);
+    --yt-spec-10-percent-layer: rgba(3, 200, 190, 0.69);
+    --yt-spec-wordmark-text: rgba(0, 255, 183, 1);
+}
+
+
+/*Channel Page Header Fix*/
+#channel-header.ytd-c4-tabbed-header-renderer {
+    background-color: #153939;
+}
+
+
+/*Global Font*/
+*{
+  font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/*Video Links - Filter*/
+.yt-horizontal-list-renderer, ytd-expanded-shelf-contents-renderer, ytd-watch-next-secondary-results-renderer, #items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer, ytd-rich-item-renderer, ytd-compact-video-renderer.ytd-item-section-renderer, ytd-video-renderer.ytd-item-section-renderer, #dismissible.ytd-video-renderer {
+    -webkit-filter: blur(5px) grayscale(0.75);
+    transition: all .2s ease-in-out; 
+}
+
+.yt-horizontal-list-renderer:hover, ytd-expanded-shelf-contents-renderer:hover, ytd-watch-next-secondary-results-renderer:hover, #items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer:hover, ytd-compact-video-renderer.ytd-item-section-renderer:hover, ytd-video-renderer.ytd-item-section-renderer:hover, #dismissible.ytd-video-renderer:hover {
+    -webkit-filter: blur(0px) grayscale(0);
+}
+
+
+/*Video Links - Animation*/
+#items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer, #dismissible.ytd-video-renderer, #items.yt-horizontal-list-renderer > *.yt-horizontal-list-renderer, ytd-rich-item-renderer {
+  transition: all .2s ease-in-out; 
+}
+
+#items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer:hover, #dismissible.ytd-video-renderer:hover, #items.yt-horizontal-list-renderer > *.yt-horizontal-list-renderer:hover, ytd-rich-item-renderer:hover, #dismissible.ytd-compact-video-renderer:hover {
+  transform: scale(1.1); 
+  z-index: 1;
+}
+
+
+/*Squarish Profile Icons*/
+#home-page-skeleton .channel-avatar {
+    border-radius: 12px;
+}
+
+
+/*IMG Animation*/
+img.yt-img-shadow {
+  border-radius: 2px;
+  transition: all .2s ease-in-out;
+}
+
+img.yt-img-shadow:hover {
+  border-radius: 0px;
+}
+
+.style-scope yt-img-shadow {
+    border-radius: 5px !important;
+}
+
+
+/*Search Box*/
+ytd-searchbox[has-focus] #container.ytd-searchbox {
+  border: 1px solid cyan;
+}
+
+
+/*Subscribe / Join button / Manage Videos / Customize Channel*/
+tp-yt-paper-button.ytd-subscribe-button-renderer, ytd-button-renderer #button.ytd-button-renderer, ytd-button-renderer.style-primary[is-paper-button] {
+  border-radius: 32px;
+}
+
+
+/*Links*/
+a.yt-simple-endpoint.yt-formatted-string {
+  color: rgba(3, 200, 190, 1);
+}
+
+a.yt-simple-endpoint.yt-formatted-string:hover {
+    color: cyan;
+}
+
+
+/*Unnecessary Stuff*/
+iron-selector#chips.style-scope.yt-chip-cloud-renderer {
+  display: none;
+}
+
+
+/*Live Indicator*/
+.badge-style-type-live-now.ytd-badge-supported-renderer, .badge-style-type-starting-soon.ytd-badge-supported-renderer {
+  color: var(--yt-spec-brand-link-text);
+  border: 1px solid var(--yt-spec-brand-link-text);
+}
+
+
+/*"Youtube" Replacement*/
+ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer {
+visibility: hidden;
+}
+
+ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer::before {
+  visibility: visible;
+  content: "Slogllykop";
+  font-weight: 800;
+  font-size: 17px;
+  position: absolute;
+  transition: 1s;
+}
+
+ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer:hover::before {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 3px rgba(3, 252, 246, 0.7)) drop-shadow(0px 0px 6px rgba(3, 252, 248, 0.5)) drop-shadow(0px 0px 9px rgba(3, 252, 249, 0.2)) drop-shadow(0px 0px 12px rgba(3, 252, 248, 0.1));
+  transition: 1s;
+}
+
+
+/*Channel Page Text Fix*/
+yt-formatted-string#text.style-scope.ytd-button-renderer.style-primary.size-default {
+  color: rgba(21,57, 57, 1);
+}
+
+
+/*DO NOT TOUCH, I Forgot What These Are*/
+html[dark] #home-page-skeleton .skeleton-bg-color,html[dark] #guide-skeleton {
+    background-color: hsl(130deg 36% 36%)
+}
+
+html[dark] #home-container-skeleton {
+    background-color: hsl(188deg 35% 37%)
+}
+
+ytd-button-renderer[disabled][is-paper-button] a.ytd-button-renderer, ytd-button-renderer.style-primary[disabled][is-paper-button] {
+  color: var(--yt-spec-text-primary);
+  border-radius: 32px;
+}
+
+yt-live-chat-message-input-renderer {
+  color: var(--yt-spec-text-primary);
+}
+ytd-browse[page-subtype=channels] {
+  background: none;
+}
+
+
+/*Player Controls*/
+.ytp-swatch-background-color {
+  background-color: var(--yt-spec-text-primary);
+}
+
+.ytp-time-separator {
+  color: var(--yt-spec-text-primary);
+}
+
+.ytp-chrome-controls {
+  background-color: rgba(3, 200, 190, 0.03);
+}
+
+.ytp-time-current, .ytp-time-duration {
+  color: var(--yt-spec-text-primary);
+}
+
+.ytp-time-display, .ytp-exp-bigger-button-like-mobile.ytp-small-mode .ytp-time-display {
+  margin-left: 45%;
+  background-color: rgba(0 ,0, 0, 0.3);  
+}
+
+.ytp-mute-button.ytp-button, .ytp-next-button.ytp-button, .ytp-play-button.ytp-button, .ytp-fullscreen-button.ytp-button, .ytp-size-button.ytp-button, .ytp-miniplayer-button.ytp-button, .ytp-button.ytp-settings-button, .ytp-subtitles-button.ytp-button, .ytp-autonav-toggle-button-container {
+  filter: invert(85%) sepia(21%) saturate(7160%) hue-rotate(135deg) brightness(500%) contrast(101%);
+}
+
+.ytp-volume-slider-handle:before, .ytp-volume-slider-handle {
+  background: var(--yt-spec-text-primary);
+}
+
+.ytp-volume-slider-handle:after {
+  background: var(--yt-spec-general-background-b);
+}
+
+
+/*Extra (Crosshair) - Personal Preference*/
+* {
+    cursor:crosshair;
+}
+
+/*END OF CSS*/
+
+/*IMP: Live chat css is not included in this version. Will add it in future versions.*/
+/*filter: invert(85%) sepia(21%) saturate(7160%) hue-rotate(135deg) brightness(500%) contrast(101%);*/
