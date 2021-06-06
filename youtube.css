@@ -1,14 +1,4 @@
-/* =================================================================== */
-/* @name               YouTube Custom Theme                            */
-/* @funtionality       Adds a Greenish-Blue theme for YouTube          */
-/* @author             Slogllykop / Slog                               */
-/* @version            ver: 2.3.5 beta                                 */
-/* @notes              CSS ONLY WORKS WITH DARK MODE                   */
-/* @discord            Slog#8870                                       */
-/* @twitter            @_Slogllykop_                                   */
-/* @youtube            @Slogllykop                                     */
-/* =================================================================== */
-
+/*Last updated on 06/06/21*/
 
 /*START OF CSS*/
 
@@ -228,12 +218,4 @@ ytd-browse[page-subtype=channels] {
   background: var(--yt-spec-general-background-b);
 }
 
-
-/*Extra (Crosshair) - Personal Preference*/
-* {
-    cursor:crosshair;
-}
-
 /*END OF CSS*/
-
-/*IMP: Live chat css is not included in this version. Will add it in future versions.*/
