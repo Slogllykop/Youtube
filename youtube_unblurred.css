@@ -68,7 +68,7 @@ html:not(.style-scope)[dark], :not(.style-scope)[dark] {
 }
 
 /*
-/*Video Links - Filter*/
+//Video Links - Filter
 .yt-horizontal-list-renderer, ytd-expanded-shelf-contents-renderer, ytd-watch-next-secondary-results-renderer, #items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer, ytd-rich-item-renderer, ytd-compact-video-renderer.ytd-item-section-renderer, ytd-video-renderer.ytd-item-section-renderer, #dismissible.ytd-video-renderer {
     -webkit-filter: blur(5px) grayscale(0.75);
     transition: all .2s ease-in-out; 
