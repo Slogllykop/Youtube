@@ -147,11 +147,11 @@ iron-selector#chips.style-scope.yt-chip-cloud-renderer {
 
 
 /*"Youtube" Replacement*/
-ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer {
+ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer, #logo-icon {
 visibility: hidden;
 }
 
-ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer::before {
+ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer::before, #logo-icon::before {
   visibility: visible;
   content: "Slogllykop";
   font-weight: 800;
@@ -160,7 +160,7 @@ ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer::befo
   transition: 1s;
 }
 
-ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer:hover::before {
+ytd-topbar-logo-renderer[is-logo-updated] yt-icon.ytd-topbar-logo-renderer:hover::before, #logo-icon:hover::before {
   cursor: pointer;
   filter: drop-shadow(0px 0px 3px rgba(3, 252, 246, 0.7)) drop-shadow(0px 0px 6px rgba(3, 252, 248, 0.5)) drop-shadow(0px 0px 9px rgba(3, 252, 249, 0.2)) drop-shadow(0px 0px 12px rgba(3, 252, 248, 0.1));
   transition: 1s;
